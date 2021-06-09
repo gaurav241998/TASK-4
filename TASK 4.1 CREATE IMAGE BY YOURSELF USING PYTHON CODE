@@ -1,0 +1,27 @@
+CREATE IMAGE BY YOURSELF USING PYTHON CODE - 
+CODE - 
+import cv2
+import numpy
+photo = numpy.zeros((800,800,3))
+font = cv2.FONT_HERSHEY_SIMPLEX
+photo = cv2.putText(photo,'TASK 4.1',(10,90), font, 4,(255,255,255),2,cv2.LINE_AA)
+photo = cv2.rectangle(photo, (240,300),(700,500), [0,255,0], 5 )
+photo = cv2.line(photo,(600,200),(700,300), [0,255,0], 5)
+photo = cv2.line(photo,(140,200),(600,200), [0,255,0], 5)
+photo = cv2.line(photo,(140,200),(240,300), [0,255,0], 5)
+photo = cv2.line(photo,(40,300),(140,200), [0,255,0], 5)
+photo = cv2.line(photo,(40,300),(240,300), [0,255,0], 5)
+photo = cv2.line(photo,(40,300),(40,500), [0,255,0], 5)
+photo = cv2.line(photo,(40,500),(240,500), [0,255,0], 5)
+photo = cv2.line(photo,(90,350),(190,350), [0,255,0], 5)
+photo = cv2.line(photo,(90,350),(90,500), [0,255,0], 5)
+photo = cv2.line(photo,(190,350),(190,500), [0,255,0], 5)
+photo = cv2.line(photo,(390,350),(650,350), [0,255,0], 5)
+photo = cv2.line(photo,(390,350),(390,450), [0,255,0], 5)
+photo = cv2.line(photo,(390,450),(650,450), [0,255,0], 5)
+photo = cv2.line(photo,(650,450),(650,350), [0,255,0], 5)
+photo = cv2.line(photo,(520,350),(520,450), [0,255,0], 5)
+photo = cv2.line(photo,(390,400),(650,400), [0,255,0], 5)
+cv2.imshow("hi gaurav here", photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
