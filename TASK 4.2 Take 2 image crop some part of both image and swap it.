@@ -1,0 +1,105 @@
+Take 2 image crop some part of both image and swap it. 
+code - 
+import cv2
+
+
+# In[3]:
+
+
+goku = cv2.imread('goku.webp')
+
+
+# In[4]:
+
+
+cv2.imshow('goku blue', goku)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[5]:
+
+
+cgoku = goku[250:495, 140:470]
+
+
+# In[6]:
+
+
+cv2.imshow('goku blue', cgoku)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[7]:
+
+
+vegeta = cv2.imread('vegeta3.jpg')
+
+
+# In[8]:
+
+
+cv2.imshow('vegeta blue', vegeta)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[9]:
+
+
+cvegeta = vegeta[0:245, 200:530]
+
+
+# In[10]:
+
+
+cvegeta.shape
+
+
+# In[11]:
+
+
+cv2.imshow('vegeta blue', cvegeta)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[12]:
+
+
+goku[200:445, 140:470] = cvegeta
+
+
+# In[13]:
+
+
+cv2.imshow('goku blue', goku)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[14]:
+
+
+goku = cv2.imread('goku.webp')
+
+
+# In[15]:
+
+
+sgoku = goku[250:495, 140:470]
+
+
+# In[16]:
+
+
+vegeta[0:245, 200:530] = sgoku
+
+
+# In[17]:
+
+
+cv2.imshow('vegeta blue', vegeta)
+cv2.waitKey()
+cv2.destroyAllWindows()
