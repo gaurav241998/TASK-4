@@ -1,0 +1,70 @@
+Take 2 image and combine it to form single image. For example collage 
+code - 
+import cv2
+
+
+# In[3]:
+
+
+goku = cv2.imread('goku.webp')
+
+
+# In[4]:
+
+
+goku.shape
+
+
+# In[5]:
+
+
+goku = goku[200:594, : ]
+
+
+# In[6]:
+
+
+cv2.imshow('goku blue', goku)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[7]:
+
+
+vegeta = cv2.imread('vegeta3.jpg')
+
+
+# In[8]:
+
+
+vegeta.shape
+
+
+# In[9]:
+
+
+cv2.imshow('vegeta blue', vegeta)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+# In[10]:
+
+
+import numpy as np
+
+
+# In[11]:
+
+
+superpower = np.concatenate((goku,vegeta), axis=1)
+
+
+# In[12]:
+
+
+cv2.imshow('super blue', superpower)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
